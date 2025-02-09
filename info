@@ -1,0 +1,49 @@
+tienda-ratones/
+│── admin/                     # Panel de administración
+│   ├── index.html              # Página principal del panel de administración
+│   ├── css/                    # Estilos del panel de administración
+│   │   ├── admin-styles.css
+│   ├── js/                     # JavaScript para administración
+│   │   ├── admin-scripts.js
+│   ├── img/                    # Imágenes de administración
+│   ├── productos.html           # Gestión de productos
+│   ├── usuarios.html            # Gestión de usuarios
+│   ├── pedidos.html             # Gestión de pedidos
+│
+│── web/                        # Página de la tienda online
+│   ├── index.html               # Página principal de la tienda
+│   ├── css/                     # Estilos de la tienda
+│   │   ├── styles.css
+│   │   ├── bootstrap.min.css    # Bootstrap para diseño responsivo
+│   ├── js/                      # Scripts de la tienda
+│   │   ├── scripts.js
+│   │   ├── carrito.js           # Lógica del carrito de compras
+│   │   ├── autenticacion.js     # Lógica de autenticación
+│   ├── img/                     # Imágenes de productos y logotipos
+│   ├── productos.html            # Página donde se muestran los ratones
+│   ├── carrito.html              # Página del carrito de compras
+│   ├── contacto.html             # Página de contacto con formulario
+│   ├── empresa.html              # Información sobre la empresa
+│   ├── usuario.html              # Registro, login y perfil de usuario
+│
+│── assets/                      # Recursos compartidos (iconos, fuentes, etc.)
+│   ├── fonts/
+│   ├── icons/
+│   ├── logo.png
+│
+│── database/                    # Archivos para la base de datos (Práctica 2)
+│   ├── esquema.sql               # Script SQL para crear la base de datos
+│   ├── conexion.php              # Conexión a la base de datos (para PHP en Práctica 3)
+│
+│── server/                      # Backend para manejar solicitudes (Práctica 2 y 3)
+│   ├── servlets/                 # Servlets Java para manejar lógica del servidor
+│   │   ├── LoginServlet.java
+│   │   ├── CarritoServlet.java
+│   │   ├── ProductoServlet.java
+│   ├── php/                      # Scripts PHP para la administración (Práctica 3)
+│   │   ├── gestionar_pedidos.php
+│   │   ├── gestionar_productos.php
+│
+│── README.md                     # Documentación del proyecto
+│── .gitignore                     # Archivos a ignorar en Git (si usas Git)
+│── favicon.ico                    # Icono de la tienda
