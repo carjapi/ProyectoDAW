@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Cargar el header (menú de navegación)
     document.getElementById("header").innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width:100%; top:0; padding: 30px;">
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
                     </ul>
                 </div>
-                <a href="login.html" class="user-icon">
+                <a href="#" class="user-icon" onclick="checkUserRole()">
                     <i class="fas fa-user"></i>
                 </a>
                 <a href="carrito.html" class="cart-icon">
@@ -39,3 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
         </footer>
     `;
 });
+
+// Función para redirigir según el rol del usuario
+function checkUserRole() {
+    const role = localStorage.getItem("userRole");
+
+    if (role === "admin") {
+        window.location.href = "admin.html"; // Redirigir al panel de administración
+    } else if (role === "usuario") {
+        window.location.href = "perfil.html"; // Redirigir a la página de perfil del usuario
+    } else {
+        window.location.href = "login.html"; // Si no ha iniciado sesión, lo manda al login
+    }
+}
