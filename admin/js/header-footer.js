@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../web/index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../web/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../web/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../web/empresa.html">Empresa</a></li>
                     </ul>
                 </div>
                 <a href="#" class="user-icon" onclick="checkUserRole()">
@@ -45,10 +45,10 @@ function checkUserRole() {
     const role = localStorage.getItem("userRole");
 
     if (role === "admin") {
-        window.location.href = "admin.html"; // Redirigir al panel de administración
+        window.location.href = "../admin/admin.html"; // Redirigir al panel de administración
     } else if (role === "usuario") {
         window.location.href = "perfil.html"; // Redirigir a la página de perfil del usuario
     } else {
-        window.location.href = "login.html"; // Si no ha iniciado sesión, lo manda al login
+        window.location.href = "../web/login.html"; // Si no ha iniciado sesión, lo manda al login
     }
 }
