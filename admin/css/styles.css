@@ -1,0 +1,182 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff !important;
+    color: #000 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #000 !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Ajustar el espacio del contenido para que no quede oculto detrás de la navbar */
+main {
+    text-align: center;
+    padding: 20px 20px; /* Reducido para acercar el contenido a la parte superior */
+    margin-top: 70px; /* Ajuste para evitar que el contenido se oculte detrás del encabezado */
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    position: relative;
+    top: -20px; /* Valor negativo para mover hacia arriba */
+}
+
+/* Estilos del pie de página */
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 5px;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem; /* Reduce el tamaño de fuente */
+}
+
+/* Botones generales */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.logo {
+    height: 40px; /* Ajusta este valor según tus necesidades */
+    width: auto;  /* Mantiene la proporción de la imagen */
+    background: transparent !important;
+}
+
+.intro-section {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.5rem;
+}
+
+/* Sección de agarre con video */
+.grip-section {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: -20px; /* Ajuste para subir la sección */
+}
+
+.grip-section h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    margin: 0 15px;
+    font-size: 24px; /* Tamaño de los iconos */
+    color: white; /* Color de los iconos */
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #007bff; /* Color al pasar el mouse */
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px; /* Separación del menú */
+    position: relative;
+}
+
+.cart-icon i {
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover i {
+    color: #007bff; /* Cambia de color al pasar el mouse */
+}
+
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+.cart-icon, .user-icon {
+    font-size: 1.2rem; /* Reducido tamaño del icono */
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    position: relative;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cart-icon:hover, .user-icon:hover {
+    color: #007bff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Ajustes para login y register */
+.login-container, .register-container {
+    max-width: 300px; /* Más pequeño */
+    margin: 50px 0 50px 50px; /* Tirado a la izquierda */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.login-container h2, .register-container h2 {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    font-size: 0.9rem; /* Reducido tamaño de los campos */
+    padding: 5px;
+    width: 100%;
+}
+
+.btn-primary {
+    width: 100%;
+}
