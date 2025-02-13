@@ -23,9 +23,17 @@ function login() {
         localStorage.setItem("userEmail", user.email);
 
         alert("Inicio de sesión exitoso");
-        window.location.href = "index.html";
-    } else {
-        console.log("Usuario no encontrado o credenciales incorrectas");
-        alert("Correo o contraseña incorrectos.");
-    }
+        alert("Inicio de sesión exitoso");
+
+        // Redirigir según el rol
+        if (user.role === "admin") {
+            window.location.href = "../admin/admin.html";
+        } else {
+            window.location.href = "../web/perfil.html";
+        }
+    } else 
+        {
+            console.log("Usuario no encontrado o credenciales incorrectas");
+            alert("Correo o contraseña incorrectos.");
+        }
 }

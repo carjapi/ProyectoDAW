@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Productos - GGMouse</title>
+    <link rel="stylesheet" href="../web/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="../web/js/header-footer.js"></script>
+</head>
+<body onload="checkAdminAccess()">
+    
+    <!-- Cargar Header -->
+    <div id="header"></div>
+    
+    <main class="container mt-5 text-center">
+        <h2 class="fw-bold">Gestión de Productos</h2>
+        <p>Administra los productos disponibles en la tienda.</p>
+
+        <!-- Botón para agregar nuevo producto -->
+        <button class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addProductModal">
+            <i class="fas fa-plus"></i> Agregar Producto
+        </button>
+
+        <!-- Tabla de Productos -->
+        <div class="table-responsive">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Los productos se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal para Agregar Producto -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Agregar Nuevo Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="productForm">
+                        <div class="mb-3">
+                            <label for="productImage" class="form-label">Imagen del Producto</label>
+                            <input type="file" class="form-control" id="productImage" accept="image/*" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="productName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productStock" class="form-label">Stock</label>
+                            <input type="number" class="form-control" id="productStock" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cargar Footer -->
+    <div id="footer" class="mt-5"></div>
+    
+    <script>
+        function checkAdminAccess() {
+            const role = localStorage.getItem("userRole");
+            console.log("Verificando acceso: Rol actual en localStorage:", role);
+            if (!role || role !== "admin") {
+                alert("Acceso denegado. Redirigiendo a inicio...");
+                window.location.href = "../web/index.html";
+            }
+        }
+
+        document.getElementById("productForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const imageFile = document.getElementById("productImage").files[0];
+            const name = document.getElementById("productName").value;
+            const price = document.getElementById("productPrice").value;
+            const stock = document.getElementById("productStock").value;
+            
+            const imageUrl = URL.createObjectURL(imageFile);
+            
+            const newRow = `<tr>
+                <td>#</td>
+                <td><img src="${imageUrl}" alt="Producto" width="50"></td>
+                <td>${name}</td>
+                <td>$${price}</td>
+                <td>${stock}</td>
+                <td>
+                    <button class='btn btn-warning btn-sm'>Editar</button>
+                    <button class='btn btn-danger btn-sm'>Eliminar</button>
+                </td>
+            </tr>`;
+            
+            document.getElementById("productTableBody").innerHTML += newRow;
+            document.getElementById("productForm").reset();
+            document.querySelector("#addProductModal .btn-close").click();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

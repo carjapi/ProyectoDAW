@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
     let basePath = window.location.pathname.includes("admin") ? "../web/" : "";    
+    const role = localStorage.getItem("userRole");
+    
+    let userPage = "../web/login.html"; // Por defecto, si no ha iniciado sesión
+
+    if (role === "admin") {
+        userPage = "../admin/admin.html";
+    } else if (role === "usuario") {
+        userPage = "../web/perfil.html";
+    }
+
     // Cargar el header (menú de navegación)
     document.getElementById("header").innerHTML = `
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width:100%; top:0; padding: 30px;">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="index.html">
-                <img src="img/GGMOUSE3.png" alt="GGMouse Logo" class="logo">
+            <a class="navbar-brand" href="../web/index.html">
+                <img src="../web/img/GGMOUSE3.png" alt="GGMouse Logo" class="logo">
             </a>                
 
             <!-- Botón de menú para móviles -->
@@ -23,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fas fa-bars"></i> 
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-                        <li><a class="dropdown-item" href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                        <li><a class="dropdown-item" href="empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
-                        <li><a class="dropdown-item" href="productos.html"><i class="fas fa-mouse"></i> Productos</a></li>
-                        <li><a class="dropdown-item" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                        <li><a class="dropdown-item" href="../web/index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a class="dropdown-item" href="../web/empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
+                        <li><a class="dropdown-item" href="../web/productos.html"><i class="fas fa-mouse"></i> Productos</a></li>
+                        <li><a class="dropdown-item" href="../web/contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
                     </ul>
                 </li>
                 </ul>
@@ -34,16 +44,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <!-- Iconos de Usuario y Carrito -->
             <div class="d-flex">
-                <a href="perfil.html" class="user-icon me-3">
+                <a href="${userPage}" class="user-icon me-3">
                     <i class="fas fa-user"></i>
                 </a>
-                <a href="carrito.html" class="cart-icon">
+                <a href="../web/carrito.html" class="cart-icon">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>
         </div>
     </nav>
-
     `;
 
     // Cargar el footer
@@ -58,16 +67,3 @@ document.addEventListener("DOMContentLoaded", function () {
         </footer>
     `;
 });
-
-// Función para redirigir según el rol del usuario
-function checkUserRole() {
-    const role = localStorage.getItem("userRole");
-
-    if (role === "admin") {
-        window.location.href = "../admin/admin.html"; // Redirigir al panel de administración
-    } else if (role === "usuario") {
-        window.location.href = "../web/perfil.html"; // Redirigir a la página de perfil del usuario
-    } else {
-        window.location.href = "../web/login.html"; // Si no ha iniciado sesión, lo manda al login
-    }
-}

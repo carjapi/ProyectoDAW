@@ -54,12 +54,15 @@
     
     <script>
         function checkAdminAccess() {
-            const role = localStorage.getItem("userRole");
-            if (role !== "admin") {
+            const role = localStorage.getItem("userRole"); 
+            console.log("Verificando acceso: Rol actual en localStorage:", role); // DEBUG
+        
+            if (!role || role !== "admin") {
                 alert("Acceso denegado. Redirigiendo a inicio...");
-                window.location.href = "../web/login.html";
+                window.location.href = "../web/index.html"; // O cambiar por la página pública
             }
         }
+
         
 
         function logout() {
