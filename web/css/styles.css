@@ -180,3 +180,7 @@ footer {
 .btn-primary {
     width: 100%;
 }
+
+.product-actions {
+    padding-bottom: 80px; /* Ajusta el margen inferior del botón */
+}
