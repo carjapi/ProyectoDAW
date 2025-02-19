@@ -12,7 +12,7 @@
 <body>
     
     <!-- Menú cargado dinámicamente -->
-    <div id="header"></div>
+	<mi-header></mi-header>
     
     <main class="container mt-5 text-center">
         <h2 class="fw-bold">Tu Carrito de Compras</h2>
@@ -43,9 +43,10 @@
     </main>
     
     <!-- Pie de página cargado dinámicamente -->
-    <div id="footer" class="mt-5"></div>
+    <mi-footer></mi-footer> 
     
-    <script src="js/header-footer.js"></script>
+    <script src="../web/js/cabecera.js"></script>
+    <script src="../web/js/footer.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             loadCart();
