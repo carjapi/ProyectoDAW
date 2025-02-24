@@ -2,7 +2,7 @@
 let productos = [
     { 
         id: 1, 
-        imagen: "../web/img/LamzuAtlantis.png", 
+        imagen: "../web/img/atlantis.png", 
         nombre: "Lamzu Atlantis OG", 
         descripcion: "Un ratón ultra ligero con gran precisión para gaming.", 
         categoria: "garra",

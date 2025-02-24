@@ -1,7 +1,7 @@
 const ratones = {
     dedos: [
         { nombre: "Ninjutso Sora V2", precio: "144,69€", imagen: "img/ninjutso.png" },
-        { nombre: "Lamzu Atlantis OG", precio: "109,90€", imagen: "img/LamzuAtlantis.png" }
+        { nombre: "Lamzu Atlantis OG", precio: "109,90€", imagen: "img/atlantis.png" }
     ],
     garra: [
         { nombre: "Lamzu Maya 4K ", precio: "124,90€", imagen: "img/mayax.png" },
