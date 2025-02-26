@@ -31,11 +31,9 @@
                     <input type="password" id="password" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="role">Selecciona tu rol:</label>
-                    <select id="role" class="form-control">
-                        <option value="usuario">Usuario</option>
-                        <option value="admin">Administrador</option>
-                    </select>
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" class="form-control" required>
+                    <small id="password-error" class="text-danger d-none">Las contraseñas no coinciden</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Registrarse</button>
                 <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
@@ -44,8 +42,26 @@
     </main>
 
     <!-- Pie de página cargado dinámicamente -->
-    <mi-footer></mi-footer> 
-
+    <mi-footer></mi-footer>
+    
+    <script>
+        document.getElementById("register-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío automático del formulario
+    
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            const passwordError = document.getElementById("password-error");
+    
+            if (password !== confirmPassword) {
+                passwordError.classList.remove("d-none"); // Muestra el mensaje de error
+            } else {
+                passwordError.classList.add("d-none"); // Oculta el mensaje de error si ya coincidían
+                alert("Registro exitoso!");
+                this.submit(); // Envía el formulario si todo es correcto
+            }
+        });
+    </script>
+    
     <script src="js/auth.js"></script>
     <script src="../web/js/cabecera.js"></script>
     <script src="../web/js/footer.js"></script>
