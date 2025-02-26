@@ -48,19 +48,16 @@
         </div>
         
         <!-- Mapa de Ubicación -->
-        <div class="mt-4 mb-5 pb-5 text-center">
+        <div class="mt-4 mb-5 pb-5">
             <h3>Nuestra Ubicación</h3>
-            <a href="https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Las+Salinas,+Avenida+Europa,+2-3,+30840,+Murcia" 
-            target="_blank" 
-            title="Ver en Google Maps">
+            <div class="map-container" onclick="openGoogleMaps()">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.5299160220116!2d-1.324236324464398!3d37.6060891172178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6315708cde7973%3A0x6f6c6f74b8f33c03!2sPol%C3%ADgono%20Industrial%20Las%20Salinas%2C%20Avenida%20Europa%2C%202-3%2C%2030840%2C%20Murcia!5e0!3m2!1ses!2ses!4v1707075290381!5m2!1ses!2ses" 
-                    width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </a>
-            <p class="mt-3 fw-bold text-danger">
-                📍 Dirección: Polígono Industrial Las Salinas, Avenida Europa, 2-3, 30840, Murcia
-            </p>
+                    width="1000" height="400" style="border:0; cursor:pointer;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p class="mt-3 fw-bold text-danger">📍 Dirección: Polígono Industrial Las Salinas, Avenida Europa, 2-3, 30840, Murcia</p>
         </div>
+
+
 
 
     
@@ -68,6 +65,12 @@
     
     <!-- Pie de página cargado dinámicamente -->
     <mi-footer></mi-footer> 
+
+    <script>
+        function openGoogleMaps() {
+            window.open("https://www.google.com/maps/place/Pol%C3%ADgono+Industrial+Las+Salinas,+Avenida+Europa,+2-3,+30840,+Murcia", "_blank");
+        }
+    </script>
 
     <script src="../web/js/cabecera.js"></script>
     <script src="../web/js/footer.js"></script>
