@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Datos de ejemplo para usuarios (en un backend real, esto vendría de una base de datos)
 let usuarios = [
-    { id: 1, nombre: "Juan Pérez", email: "juan@example.com", rol: "usuario", activo: true },
-    { id: 2, nombre: "María López", email: "maria@example.com", rol: "admin", activo: true },
-    { id: 3, nombre: "Carlos García", email: "carlos@example.com", rol: "usuario", activo: false }
+    { id: 1, nombre: "Jose Lopez", email: "jose@example.com", rol: "usuario", activo: true },
+    { id: 2, nombre: "María Pina", email: "maria@example.com", rol: "admin", activo: true },
+    { id: 3, nombre: "Carlos Piquer", email: "carlos@example.com", rol: "usuario", activo: false }
 ];
 
 function cargarUsuarios() {

@@ -1,7 +1,7 @@
 // Lista de pedidos precargados
 let pedidos = [
-    { id: 1, cliente: "Juan Pérez", producto: "Lamzu Atlantis OG", cantidad: 2, precio: 109.90, estado: "Pendiente" },
-    { id: 2, cliente: "Ana López", producto: "Razer DeathAdder V3 Pro", cantidad: 1, precio: 129.99, estado: "Pendiente" }
+    { id: 1, cliente: "Matias López", producto: "Lamzu Atlantis OG", cantidad: 2, precio: 109.90, estado: "Pendiente" },
+    { id: 2, cliente: "Pablo Moncho", producto: "Razer DeathAdder V3 Pro", cantidad: 1, precio: 129.99, estado: "Pendiente" }
 ];
 
 document.addEventListener("DOMContentLoaded", function() {

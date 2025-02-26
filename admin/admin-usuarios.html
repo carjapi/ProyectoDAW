@@ -39,25 +39,24 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Editar Usuario</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="editUserModalLabel">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <form id="editUserForm">
-                        <input type="hidden" id="editUserId">
                         <div class="mb-3">
-                            <label for="editUserName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="editUserName" required>
+                            <label for="userName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="userName">
                         </div>
                         <div class="mb-3">
-                            <label for="editUserEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="editUserEmail" required>
+                            <label for="userEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="userEmail">
                         </div>
                         <div class="mb-3">
-                            <label for="editUserRole" class="form-label">Rol</label>
-                            <select class="form-select" id="editUserRole">
-                                <option value="usuario">Usuario</option>
-                                <option value="admin">Administrador</option>
+                            <label for="userStatus" class="form-label">Estado</label>
+                            <select class="form-control" id="userStatus">
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
@@ -66,6 +65,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Pie de página cargado dinámicamente -->
     <mi-footer></mi-footer>
