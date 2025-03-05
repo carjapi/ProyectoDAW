@@ -180,3 +180,144 @@ footer {
 .btn-primary {
     width: 100%;
 }
+/* ===== Estilos para el Panel de admin-pedidos ===== */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Contenedor principal */
+main.container {
+    text-align: left;
+    margin-top: 50px;
+}
+
+/* Estilos de títulos */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Barra de búsqueda */
+#buscarPedido {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Tabla de pedidos */
+.table-responsive {
+    margin-top: 20px;
+}
+
+table.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Botón de acciones */
+.btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+/* Pie de página */
+mi-footer {
+    margin-top: 30px;
+}
+
+/* ===== Estilos para el Panel de admin-productos ===== */
+/* Estilos Generales */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Contenedor Principal */
+main.container {
+    margin-top: 50px;
+    text-align: left;
+}
+
+/* Tabla de Productos */
+.table-responsive {
+    margin-top: 20px;
+}
+
+.table-dark th,
+.table-dark td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Botón de agregar producto */
+.btn-success {
+    margin-bottom: 20px;
+}
+
+/* Modal */
+.modal-content {
+    padding: 20px;
+}
+
+
+/* ===== Estilos para el Panel de Administración ===== */
+
+/* Título principal */
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Descripción */
+.descripcion-admin {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/* Estilos de las tarjetas del panel */
+.admin-card {
+    background-color: #212529;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    background-color: #343a40;
+}
+
+.icono-admin {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffc107;
+}
+
+/* Botón de Cerrar Sesión */
+.cerrar-sesion {
+    margin-top: 30px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}

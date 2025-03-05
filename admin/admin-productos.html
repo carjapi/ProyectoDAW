@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar Productos - GGMouse</title>
-    <link rel="stylesheet" href="../web/css/styles.css">
+    
+    <!-- Enlace a estilos -->
+    <link rel="stylesheet" href="../admin/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/ico" href="../web/img/GGMOUSE3.png" sizes="64x64">
+    
+    <!-- Scripts de cabecera y footer -->
     <script src="../web/js/cabecera.js"></script>
     <script src="../web/js/footer.js"></script>
 </head>
 <body onload="checkAdminAccess()">
     
     <!-- Cargar Header -->
-	<mi-header></mi-header>
+    <mi-header></mi-header>
     
-    <main class="container mt-5 text-center">
-        <h2 class="fw-bold">Gestión de Productos</h2>
-        <p>Administra los productos disponibles en la tienda.</p>
+    <main class="container">
+        <h2 class="fw-bold text-center">Gestión de Productos</h2>
+        <p class="text-center">Administra los productos disponibles en la tienda.</p>
 
         <!-- Botón para agregar nuevo producto -->
-        <button class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#addProductModal">
+        <button class="btn btn-success d-block mx-auto" data-bs-toggle="modal" data-bs-target="#addProductModal">
             <i class="fas fa-plus"></i> Agregar Producto
         </button>
 
@@ -61,17 +65,14 @@
                             <label for="productImage" class="form-label">Imagen del Producto</label>
                             <input type="file" class="form-control" id="productImage" required>
                         </div>
-                    
                         <div class="mb-3">
                             <label for="productName" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="productName" required>
                         </div>
-                    
                         <div class="mb-3">
                             <label for="productDescription" class="form-label">Descripción</label>
                             <textarea class="form-control" id="productDescription" rows="3" required></textarea>
                         </div>
-                    
                         <div class="mb-3">
                             <label for="productCategory" class="form-label">Categoría</label>
                             <select class="form-control" id="productCategory" required>
@@ -82,28 +83,26 @@
                                 <option value="polivalentes">Polivalentes</option>
                             </select>
                         </div>
-                    
                         <div class="mb-3">
                             <label for="productPrice" class="form-label">Precio (€)</label>
                             <input type="number" class="form-control" id="productPrice" required>
                         </div>
-                    
                         <div class="mb-3">
                             <label for="productStock" class="form-label">Stock</label>
                             <input type="number" class="form-control" id="productStock" required>
                         </div>
-                    
                         <button type="submit" class="btn btn-primary">Añadir Producto</button>
                     </form>                    
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Cargar Footer -->
     <mi-footer></mi-footer> 
     
-    <script  src="../admin/js/admin-productos.js"></script>
+    <!-- Scripts -->
+    <script src="../admin/js/admin-productos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
